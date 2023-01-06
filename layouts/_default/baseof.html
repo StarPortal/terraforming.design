@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ partial "head/style" . }}
+  </head>
+  <body>
+    <main class="flex flex-col min-h-screen space-y-16 items-center justify-center">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </body>
+</html>

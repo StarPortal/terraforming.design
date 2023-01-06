@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <div>
+    {{ with resources.Get "images/identity.svg" }}
+    <img src="{{ .RelPermalink }}" width="300" height="132" alt="{{ $.Site.Title }}" />
+    {{ end }}
+  </div>
+
+  <div class="flex space-x-4 items-center">
+    <span class="font-bold">Powered by</span>
+    {{ with resources.Get "images/aotokitsuruya.svg" }}
+    <a href="https://blog.aotoki.me" target="_blank"><img src="{{ .RelPermalink }}" width="200" height="31" alt="蒼時弦也" /></a>
+    {{ end }}
+  </div>
+{{ end }}
